@@ -18,15 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Add a subtle scroll effect to the header
+    // Add a scroll effect to the header
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = '#1a1a1a';
-            header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.6)';
+            header.classList.add('scrolled');
         } else {
-            header.style.backgroundColor = '#1f1f1f';
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
+            header.classList.remove('scrolled');
         }
     });
 });
