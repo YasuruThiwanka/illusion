@@ -11,12 +11,13 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    font-size: 16px;
     background:
         linear-gradient(to bottom, rgba(58, 28, 77, 0.8), rgba(28, 14, 42, 0.9)),
         url('https://i.imgur.com/Fkv32qE.jpg') no-repeat center center;
     background-size: cover;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
     background-attachment: fixed;
 }
 
@@ -26,11 +27,11 @@ h1, h2, h3 {
 }
 
 h2 {
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-size: 2.8em;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 3em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 p {
@@ -38,6 +39,7 @@ p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.1rem;
 }
 
 a {
@@ -105,7 +107,7 @@ nav ul {
 }
 
 nav ul li a {
-    font-size: 1.1em;
+    font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -123,14 +125,14 @@ nav ul li a {
 }
 
 #hero .hero-content h1 {
-    font-size: 5em;
+    font-size: 5.5em;
     margin-bottom: 0.2em;
     font-weight: 900;
     text-transform: uppercase;
 }
 
 #hero .hero-content p {
-    font-size: 1.5em;
+    font-size: 1.6rem;
     margin-bottom: 2em;
     text-align: center;
 }
@@ -147,7 +149,7 @@ nav ul li a {
     display: inline-block;
     border: none;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1rem;
     letter-spacing: 1px;
 }
 
@@ -179,45 +181,7 @@ nav ul li a {
 #about ul li {
     display: inline-block;
     margin: 0 20px;
-    font-size: 1.2em;
-}
-
-/* Sponsorship Table */
-.sponsorship-table {
-    overflow-x: auto;
-    background-color: var(--card-bg-color);
-    border-radius: 10px;
-    padding: 20px;
-    border: 1px solid var(--border-color);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-}
-
-th {
-    background-color: transparent;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    font-size: 1.2em;
-}
-
-tbody tr:last-child td {
-    border-bottom: none;
-}
-
-td:first-child {
-    text-align: left;
-    font-weight: bold;
-    color: var(--text-color);
+    font-size: 1.3rem;
 }
 
 /* Partnership Section */
@@ -276,7 +240,7 @@ td:first-child {
     border-radius: 10px;
     border: 1px solid var(--border-color);
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2rem;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -288,8 +252,8 @@ td:first-child {
 /* Sponsorship Cards */
 .sponsorship-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr; /* 1 column on small screens */
+    gap: 40px;
     margin-top: 50px;
 }
 
@@ -316,12 +280,12 @@ td:first-child {
 
 .card-header h3 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.2em;
     color: var(--accent-color);
 }
 
 .card-header .price {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 700;
     margin-top: 10px;
 }
@@ -339,6 +303,7 @@ td:first-child {
 .card-body ul li {
     margin-bottom: 15px;
     text-align: left;
+    font-size: 1.1rem;
 }
 
 .card-body ul li strong {
@@ -367,7 +332,7 @@ td:first-child {
     border: 1px solid var(--border-color);
     background-color: var(--card-bg-color);
     color: var(--text-color);
-    font-size: 1em;
+    font-size: 1.1rem;
 }
 
 #contact input:focus, #contact textarea:focus {
@@ -380,12 +345,60 @@ td:first-child {
     margin-top: 40px;
 }
 
+/* Donation Section */
+#donation-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#donation-form input {
+    flex-grow: 1;
+    padding: 18px 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+    border-right: none;
+}
+
+#donation-form button {
+    border-radius: 0 50px 50px 0;
+}
+
+/* Form Status Messages */
+.form-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+}
+
+.form-status.success {
+    background-color: #2e7d32; /* Green */
+    color: white;
+    display: block;
+}
+
+.form-status.error {
+    background-color: #c62828; /* Red */
+    color: white;
+    display: block;
+}
+
 /* Footer */
 footer {
     background-color: rgba(0,0,0,0.2);
     text-align: center;
     padding: 30px 20px;
-    font-size: 0.9em;
+    font-size: 1rem;
     margin-top: 60px;
 }
 
@@ -393,7 +406,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     h2 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     nav ul {
@@ -405,10 +418,16 @@ footer {
     }
 
     #hero .hero-content h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
     #hero .hero-content p {
-        font-size: 1.2em;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .sponsorship-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
